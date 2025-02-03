@@ -1,7 +1,7 @@
 {
     "genesis_time": "2024-02-08T00:17:23.342520258Z",
     "chain_id": "xian-testnet-12",
-    "initial_height": "1241",
+    "initial_height": "1335",
     "consensus_params": {
         "block": {
             "max_bytes": "22020096",
@@ -42,8 +42,8 @@
     ],
     "app_hash": "",
     "abci_genesis": {
-        "hash": "39383463303762636233393165366232343964633461666433386137366338336464643934303365663234653631613337663966323138633536303565333137",
-        "number": 1241,
+        "hash": "33616538353138663139393066663230393739636362313538616637343362373163643061633263623733643539383732316637663239383566316233326334",
+        "number": 1335,
         "origin": {
             "signature": "",
             "sender": ""
@@ -167,6 +167,56 @@
                         0
                     ]
                 }
+            },
+            {
+                "key": "con_asdasdsad.__code__",
+                "value": "__balances = Hash(default_value=0, contract='con_asdasdsad', name='balances')\n__metadata = Hash(contract='con_asdasdsad', name='metadata')\n__TransferEvent = LogEvent(event='Transfer', params={'from': {'type': str,\n    'idx': True}, 'to': {'type': str, 'idx': True}, 'amount': {'type': (int,\n    float, decimal)}}, contract='con_asdasdsad', name='TransferEvent')\n__ApproveEvent = LogEvent(event='Approve', params={'from': {'type': str,\n    'idx': True}, 'to': {'type': str, 'idx': True}, 'amount': {'type': (int,\n    float, decimal)}}, contract='con_asdasdsad', name='ApproveEvent')\n\n\ndef ____():\n    __balances[ctx.caller] = 123\n    __metadata['token_name'] = 'asdasdsad'\n    __metadata['token_symbol'] = 'sfa'\n    __metadata['token_logo_url'] = ''\n    __metadata['token_website'] = ''\n    __metadata['total_supply'] = 123\n    __metadata['operator'] = ctx.caller\n\n\n@__export('con_asdasdsad')\ndef change_metadata(key: str, value: Any):\n    assert ctx.caller == __metadata['operator'\n        ], 'Only operator can set metadata!'\n    __metadata[key] = value\n\n\n@__export('con_asdasdsad')\ndef balance_of(address: str):\n    return __balances[address]\n\n\n@__export('con_asdasdsad')\ndef transfer(amount: float, to: str):\n    assert amount > 0, 'Cannot send negative balances!'\n    assert __balances[ctx.caller] >= amount, 'Not enough coins to send!'\n    __balances[ctx.caller] -= amount\n    __balances[to] += amount\n    __TransferEvent({'from': ctx.caller, 'to': to, 'amount': amount})\n\n\n@__export('con_asdasdsad')\ndef approve(amount: float, to: str):\n    assert amount > 0, 'Cannot send negative balances!'\n    __balances[ctx.caller, to] = amount\n    __ApproveEvent({'from': ctx.caller, 'to': to, 'amount': amount})\n\n\n@__export('con_asdasdsad')\ndef transfer_from(amount: float, to: str, main_account: str):\n    assert amount > 0, 'Cannot send negative balances!'\n    assert __balances[main_account, ctx.caller\n        ] >= amount, f'Not enough coins approved to send! You have {__balances[main_account, ctx.caller]} and are trying to spend {amount}'\n    assert __balances[main_account] >= amount, 'Not enough coins to send!'\n    __balances[main_account, ctx.caller] -= amount\n    __balances[main_account] -= amount\n    __balances[to] += amount\n    __TransferEvent({'from': main_account, 'to': to, 'amount': amount})\n"
+            },
+            {
+                "key": "con_asdasdsad.__developer__",
+                "value": "7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e"
+            },
+            {
+                "key": "con_asdasdsad.__submitted__",
+                "value": {
+                    "__time__": [
+                        2025,
+                        1,
+                        26,
+                        16,
+                        51,
+                        25,
+                        0
+                    ]
+                }
+            },
+            {
+                "key": "con_asdasdsad.balances:7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e",
+                "value": 123
+            },
+            {
+                "key": "con_asdasdsad.metadata:operator",
+                "value": "7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e"
+            },
+            {
+                "key": "con_asdasdsad.metadata:token_logo_url",
+                "value": ""
+            },
+            {
+                "key": "con_asdasdsad.metadata:token_name",
+                "value": "asdasdsad"
+            },
+            {
+                "key": "con_asdasdsad.metadata:token_symbol",
+                "value": "sfa"
+            },
+            {
+                "key": "con_asdasdsad.metadata:token_website",
+                "value": ""
+            },
+            {
+                "key": "con_asdasdsad.metadata:total_supply",
+                "value": 123
             },
             {
                 "key": "con_asds.__code__",
@@ -323,13 +373,13 @@
             {
                 "key": "con_bigtoken2.balances:39a982e221a2805a585fad76cc4147daba631ff8e64e640a4ff3815dc780e7f0",
                 "value": {
-                    "__fixed__": "99999999999999999999010819715.999999968377538753310987705078"
+                    "__fixed__": "99999999999999999998910719715.999999968377538753310987705078"
                 }
             },
             {
                 "key": "con_bigtoken2.balances:39a982e221a2805a585fad76cc4147daba631ff8e64e640a4ff3815dc780e7f0:con_dex22",
                 "value": {
-                    "__fixed__": "13165975045680062.6"
+                    "__fixed__": "13165974945580062.6"
                 }
             },
             {
@@ -353,7 +403,7 @@
             {
                 "key": "con_bigtoken2.balances:con_dex_pairs2",
                 "value": {
-                    "__fixed__": "989179284"
+                    "__fixed__": "1089279284"
                 }
             },
             {
@@ -1333,7 +1383,7 @@
             {
                 "key": "con_dex_pairs2.balances:con_bigtoken2",
                 "value": {
-                    "__fixed__": "989179284"
+                    "__fixed__": "1089279284"
                 }
             },
             {
@@ -1357,7 +1407,7 @@
             {
                 "key": "con_dex_pairs2.balances:con_testtoken",
                 "value": {
-                    "__fixed__": "989179292.337691103385709723481308325324"
+                    "__fixed__": "898525781.04525609903334815360498515117"
                 }
             },
             {
@@ -1545,13 +1595,13 @@
             {
                 "key": "con_dex_pairs2.pairs:3:balance0",
                 "value": {
-                    "__fixed__": "989179284"
+                    "__fixed__": "1089279284"
                 }
             },
             {
                 "key": "con_dex_pairs2.pairs:3:balance1",
                 "value": {
-                    "__fixed__": "989179284"
+                    "__fixed__": "898525772.707564995647638430123676825846"
                 }
             },
             {
@@ -1570,12 +1620,12 @@
                 "key": "con_dex_pairs2.pairs:3:blockTimestampLast",
                 "value": {
                     "__time__": [
-                        2024,
-                        12,
-                        18,
-                        13,
-                        9,
-                        13,
+                        2025,
+                        1,
+                        26,
+                        16,
+                        52,
+                        26,
                         0
                     ]
                 }
@@ -1603,13 +1653,13 @@
             {
                 "key": "con_dex_pairs2.pairs:3:reserve0",
                 "value": {
-                    "__fixed__": "989179284"
+                    "__fixed__": "1089279284"
                 }
             },
             {
                 "key": "con_dex_pairs2.pairs:3:reserve1",
                 "value": {
-                    "__fixed__": "989179284"
+                    "__fixed__": "898525772.707564995647638430123676825846"
                 }
             },
             {
@@ -4674,6 +4724,52 @@
             {
                 "key": "con_my_cool_token1.metadata:token_symbol",
                 "value": "RSWP"
+            },
+            {
+                "key": "con_name_service.__code__",
+                "value": "import currency\n__manager = Variable(contract='con_name_service', name='manager')\n__names = Hash(default_value=False, contract='con_name_service', name='names')\n__balances = Hash(default_value=0, contract='con_name_service', name='balances'\n    )\n__approvals = Hash(default_value=0, contract='con_name_service', name=\n    'approvals')\n__expiry_times = Hash(default_value=None, contract='con_name_service', name\n    ='expiry_times')\n__owners = Hash(default_value=None, contract='con_name_service', name='owners')\n__mint_price = Variable(contract='con_name_service', name='mint_price')\n__royalty_fee_percentage = Variable(contract='con_name_service', name=\n    'royalty_fee_percentage')\n__registration_period = Variable(contract='con_name_service', name=\n    'registration_period')\n__contracts_allowlist = Variable(contract='con_name_service', name=\n    'contracts_allowlist')\n__enabled = Variable(contract='con_name_service', name='enabled')\n__main_name_to_address = Hash(default_value=None, contract=\n    'con_name_service', name='main_name_to_address')\n__address_to_main_name = Hash(default_value=None, contract=\n    'con_name_service', name='address_to_main_name')\n\n\ndef ____():\n    __manager.set(ctx.caller)\n    __enabled.set(False)\n    __contracts_allowlist.set([])\n    __mint_price.set(1)\n    __royalty_fee_percentage.set(2)\n    __registration_period.set(365)\n\n\ndef __assert_is_manager():\n    assert ctx.caller == __manager.get(), 'You are not the manager'\n\n\ndef __assert_is_owner(address: str, name: str):\n    assert __balances[address, name] == 1, 'You are not the owner of this name'\n\n\ndef __assert_if_contract_is_approved(contract: str):\n    if 'con_' in contract:\n        assert contract in __contracts_allowlist.get(\n            ), 'This contract is not allowed to interact with this contract'\n\n\ndef __assert_is_approved_for_transfer(main_account: str, to: str, name: str):\n    assert __approvals[main_account, to, name\n        ] == 1, 'Name is not approved for transfer'\n\n\ndef __is_expired(name: str):\n    expiry = __expiry_times[name]\n    if expiry is None:\n        return True\n    return now >= expiry\n\n\ndef __assert_is_not_expired(name: str):\n    assert not __is_expired(name), 'Name is expired'\n\n\ndef __assert_is_enabled():\n    assert __enabled.get() == True, 'Contract is not enabled'\n\n\n@__export('con_name_service')\ndef mint_name(name: str):\n    __assert_is_enabled()\n    __assert_if_contract_is_approved(ctx.caller)\n    name = name.lower()\n    assert name.isalnum() and name.isascii(\n        ), 'Name must be alphanumeric and ascii'\n    assert len(name) >= 3, 'The minimum length is 3 characters'\n    assert len(name) <= 32, 'The maximum length is 32 characters'\n    if __names[name] != False:\n        assert __is_expired(name\n            ), 'Name already exists and has not expired yet.'\n    currency.transfer_from(amount=__mint_price.get(), to=__manager.get(),\n        main_account=ctx.caller)\n    __names[name] = {}\n    __expiry_times[name] = now + datetime.timedelta(days=\n        __registration_period.get())\n    __balances[ctx.caller, name] = 1\n    __owners[name] = ctx.caller\n\n\n@__export('con_name_service')\ndef transfer(name: str, to: str):\n    __assert_is_not_expired(name)\n    assert name != '', 'Please specify the Name you want to transfer'\n    __assert_is_owner(ctx.caller, name)\n    __balances[ctx.caller, name] = 0\n    __balances[to, name] = 1\n    __main_name_to_address[name] = None\n    __address_to_main_name[ctx.caller] = None\n    __names[name] = {}\n    __owners[name] = to\n\n\n@__export('con_name_service')\ndef approve(name: str, to: str):\n    __assert_is_not_expired(name)\n    __assert_is_owner(ctx.caller, name)\n    __approvals[ctx.caller, to, name] = 1\n\n\n@__export('con_name_service')\ndef revoke_approval(name: str, to: str):\n    __assert_is_not_expired(name)\n    __assert_is_owner(ctx.caller, name)\n    __approvals[ctx.caller, to, name] = 0\n\n\n@__export('con_name_service')\ndef transfer_from(name: str, to: str, main_account: str):\n    __assert_if_contract_is_approved(ctx.caller)\n    assert name != '', 'Please specify the Name you want to transfer'\n    __assert_is_not_expired(name)\n    __assert_is_owner(main_account, name)\n    __assert_is_approved_for_transfer(main_account, to, name)\n    __approvals[main_account, to, name] = 0\n    __balances[main_account, name] = 0\n    __balances[to, name] = 1\n    __main_name_to_address[name] = None\n    __address_to_main_name[main_account] = None\n    __names[name] = {}\n    __owners[name] = to\n\n\n@__export('con_name_service')\ndef set_main_name_to_caller(name: str):\n    __assert_is_not_expired(name)\n    __assert_is_owner(ctx.caller, name)\n    __main_name_to_address[name] = ctx.caller\n    __address_to_main_name[ctx.caller] = name\n\n\n@__export('con_name_service')\ndef set_data(name: str, data: dict):\n    __assert_is_not_expired(name)\n    __assert_is_owner(ctx.caller, name)\n    __names[name] = data\n\n\n@__export('con_name_service')\ndef get_main_name_to_address(name: str):\n    address = __main_name_to_address[name]\n    if address is None or __is_expired(name):\n        return None\n    return address\n\n\n@__export('con_name_service')\ndef get_address_to_main_name(address: str):\n    name = __address_to_main_name[address]\n    if name is None or __is_expired(name):\n        return None\n    return name\n\n\n@__export('con_name_service')\ndef get_owner(name: str):\n    owner = __owners[name]\n    if owner is None or __is_expired(name):\n        return None\n    return owner\n\n\n@__export('con_name_service')\ndef get_expiry_time(name: str):\n    return __expiry_times[name]\n\n\n@__export('con_name_service')\ndef get_data(name: str):\n    return __names[name]\n\n\n@__export('con_name_service')\ndef is_owner(name: str, address: str):\n    return __balances[address, name] == 1 and not __is_expired(name)\n\n\n@__export('con_name_service')\ndef renew_name(name: str):\n    __assert_is_not_expired(name)\n    __assert_is_owner(ctx.caller, name)\n    currency.transfer_from(amount=__mint_price.get(), to=__manager.get(),\n        main_account=ctx.caller)\n    __expiry_times[name] = __expiry_times[name] + datetime.timedelta(days=\n        __registration_period.get())\n\n\n@__export('con_name_service')\ndef set_mint_price(price: int):\n    __assert_is_manager()\n    __mint_price.set(price)\n\n\n@__export('con_name_service')\ndef set_royalty_fee_percentage(percentage: int):\n    __assert_is_manager()\n    __royalty_fee_percentage.set(percentage)\n\n\n@__export('con_name_service')\ndef set_manager(new_manager: str):\n    __assert_is_manager()\n    __manager.set(new_manager)\n\n\n@__export('con_name_service')\ndef set_contract_allowlist(contracts: list):\n    __assert_is_manager()\n    __contracts_allowlist.set(contracts)\n\n\n@__export('con_name_service')\ndef set_registration_period(period: int):\n    __assert_is_manager()\n    __registration_period.set(period)\n\n\n@__export('con_name_service')\ndef set_enabled(state: bool):\n    __assert_is_manager()\n    __enabled.set(state)\n"
+            },
+            {
+                "key": "con_name_service.__developer__",
+                "value": "7067cf020cfeecd001b656b924639713efa3affc71ecd7db6f4a3e99c8b52d05"
+            },
+            {
+                "key": "con_name_service.__submitted__",
+                "value": {
+                    "__time__": [
+                        2025,
+                        2,
+                        1,
+                        15,
+                        27,
+                        47,
+                        0
+                    ]
+                }
+            },
+            {
+                "key": "con_name_service.contracts_allowlist",
+                "value": []
+            },
+            {
+                "key": "con_name_service.enabled",
+                "value": false
+            },
+            {
+                "key": "con_name_service.manager",
+                "value": "7067cf020cfeecd001b656b924639713efa3affc71ecd7db6f4a3e99c8b52d05"
+            },
+            {
+                "key": "con_name_service.mint_price",
+                "value": 1
+            },
+            {
+                "key": "con_name_service.registration_period",
+                "value": 365
+            },
+            {
+                "key": "con_name_service.royalty_fee_percentage",
+                "value": 2
             },
             {
                 "key": "con_nameservice.__code__",
@@ -10625,6 +10721,188 @@
                 }
             },
             {
+                "key": "con_ref.__code__",
+                "value": "__balances = Hash(default_value=0, contract='con_ref', name='balances')\n__t_balances = Hash(default_value=0, contract='con_ref', name='t_balances')\n__metadata = Hash(contract='con_ref', name='metadata')\n__excluded = Hash(default_value=False, contract='con_ref', name='excluded')\n__r_total = Variable(contract='con_ref', name='r_total')\n__t_total = Variable(contract='con_ref', name='t_total')\n__approved = Hash(default_value=0, contract='con_ref', name='approved')\nBURN_BPS = 200\nREFLECTION_BPS = 300\nTOTAL_BPS = 10000\nBURN_ADDRESS = '0' * 64\n\n\ndef ____():\n    initial_supply = 100000000\n    r_initial = initial_supply * 10 ** 18\n    __balances[ctx.caller] = r_initial\n    __r_total.set(r_initial)\n    __t_total.set(initial_supply)\n    __excluded[ctx.this] = True\n    __excluded[BURN_ADDRESS] = True\n    __t_balances[BURN_ADDRESS] = 0\n    __metadata['token_name'] = 'REFLECT TOKEN'\n    __metadata['token_symbol'] = 'RFT'\n    __metadata['token_logo_url'] = ''\n    __metadata['token_website'] = ''\n    __metadata['operator'] = ctx.caller\n\n\n@__export('con_ref')\ndef change_metadata(key: str, value: Any):\n    assert ctx.caller == __metadata['operator'\n        ], 'Only operator can change metadata!'\n    __metadata[key] = value\n\n\n@__export('con_ref')\ndef transfer(amount: int, to: str):\n    assert amount > 0, 'Cannot send negative balances!'\n    from_excluded = __excluded[ctx.caller]\n    to_excluded = __excluded[to]\n    rate = __r_total.get() * TOTAL_BPS // __t_total.get()\n    if not from_excluded:\n        assert __balances[ctx.caller\n            ] >= amount * rate // TOTAL_BPS, 'Not enough coins to send!'\n        r_amount = amount * rate // TOTAL_BPS\n    else:\n        assert __t_balances[ctx.caller] >= amount, 'Not enough coins to send!'\n        r_amount = amount * rate // TOTAL_BPS\n    burn_amount = amount * BURN_BPS // TOTAL_BPS\n    reflection_amount = amount * REFLECTION_BPS // TOTAL_BPS\n    transfer_amount = amount - burn_amount - reflection_amount\n    if from_excluded:\n        if to_excluded:\n            __t_balances[ctx.caller] -= amount\n            __t_balances[to] += transfer_amount\n            __t_balances[BURN_ADDRESS] += burn_amount\n        else:\n            __t_balances[ctx.caller] -= amount\n            __balances[to] += transfer_amount * rate // TOTAL_BPS\n            __t_balances[BURN_ADDRESS] += burn_amount\n    elif to_excluded:\n        __balances[ctx.caller] -= r_amount\n        __t_balances[to] += transfer_amount\n        __t_balances[BURN_ADDRESS] += burn_amount\n    else:\n        __balances[ctx.caller] -= r_amount\n        __balances[to] += transfer_amount * rate // TOTAL_BPS\n        __t_balances[BURN_ADDRESS] += burn_amount\n    __t_total.set(__t_total.get() - burn_amount - reflection_amount)\n    __r_total.set(__r_total.get() - (burn_amount + reflection_amount) *\n        rate // TOTAL_BPS)\n    return f'Transferred {amount}'\n\n\n@__export('con_ref')\ndef approve(amount: int, to: str):\n    assert amount > 0, 'Cannot approve negative balances!'\n    __approved[ctx.caller, to] = amount\n    return f'Approved {amount} for {to}'\n\n\n@__export('con_ref')\ndef transfer_from(amount: int, to: str, main_account: str):\n    assert amount > 0, 'Cannot send negative balances!'\n    assert __approved[main_account, ctx.caller\n        ] >= amount, 'Not enough coins approved!'\n    from_excluded = __excluded[main_account]\n    to_excluded = __excluded[to]\n    rate = __r_total.get() * TOTAL_BPS // __t_total.get()\n    if not from_excluded:\n        assert __balances[main_account\n            ] >= amount * rate // TOTAL_BPS, 'Not enough coins!'\n        r_amount = amount * rate // TOTAL_BPS\n    else:\n        assert __t_balances[main_account] >= amount, 'Not enough coins!'\n        r_amount = amount * rate // TOTAL_BPS\n    burn_amount = amount * BURN_BPS // TOTAL_BPS\n    reflection_amount = amount * REFLECTION_BPS // TOTAL_BPS\n    transfer_amount = amount - burn_amount - reflection_amount\n    __approved[main_account, ctx.caller] -= amount\n    if from_excluded:\n        if to_excluded:\n            __t_balances[main_account] -= amount\n            __t_balances[to] += transfer_amount\n            __t_balances[BURN_ADDRESS] += burn_amount\n        else:\n            __t_balances[main_account] -= amount\n            __balances[to] += transfer_amount * rate // TOTAL_BPS\n            __t_balances[BURN_ADDRESS] += burn_amount\n    elif to_excluded:\n        __balances[main_account] -= r_amount\n        __t_balances[to] += transfer_amount\n        __t_balances[BURN_ADDRESS] += burn_amount\n    else:\n        __balances[main_account] -= r_amount\n        __balances[to] += transfer_amount * rate // TOTAL_BPS\n        __t_balances[BURN_ADDRESS] += burn_amount\n    __t_total.set(__t_total.get() - burn_amount - reflection_amount)\n    __r_total.set(__r_total.get() - (burn_amount + reflection_amount) *\n        rate // TOTAL_BPS)\n    return f'Sent {amount} to {to} from {main_account}'\n\n\n@__export('con_ref')\ndef balance_of(address: str):\n    if __excluded[address]:\n        return __t_balances[address]\n    return __balances[address] * __t_total.get() // __r_total.get()\n\n\n@__export('con_ref')\ndef allowance(owner: str, spender: str):\n    return __approved[owner, spender]\n\n\n@__export('con_ref')\ndef get_total_supply():\n    return __t_total.get()\n\n\n@__export('con_ref')\ndef exclude_from_rewards(address: str):\n    assert ctx.caller == __metadata['operator'], 'Only operator can exclude!'\n    assert not __excluded[address], 'Address already excluded!'\n    __excluded[address] = True\n    t_amount = balance_of(address)\n    __balances[address] = 0\n    __t_balances[address] = t_amount\n\n\n@__export('con_ref')\ndef include_in_rewards(address: str):\n    assert ctx.caller == __metadata['operator'], 'Only operator can include!'\n    assert __excluded[address], 'Address not excluded!'\n    t_amount = __t_balances[address]\n    rate = __r_total.get() * TOTAL_BPS // __t_total.get()\n    __excluded[address] = False\n    __t_balances[address] = 0\n    __balances[address] = t_amount * rate // TOTAL_BPS\n"
+            },
+            {
+                "key": "con_ref.__developer__",
+                "value": "081e233f4e122a5fd79ff3c44f9d58848c3214f7110130936661394403100a9a"
+            },
+            {
+                "key": "con_ref.__submitted__",
+                "value": {
+                    "__time__": [
+                        2025,
+                        2,
+                        1,
+                        0,
+                        0,
+                        52,
+                        0
+                    ]
+                }
+            },
+            {
+                "key": "con_ref.balances:081e233f4e122a5fd79ff3c44f9d58848c3214f7110130936661394403100a9a",
+                "value": {
+                    "__big_int__": "47265433000000000000000000"
+                }
+            },
+            {
+                "key": "con_ref.balances:7fe83202b3130727ca8af23c25d282ccc0b6e49f1c5d57379175991bad1021f6",
+                "value": {
+                    "__big_int__": "1172839000000000000000000"
+                }
+            },
+            {
+                "key": "con_ref.balances:7fe83202b3130727ca8af23c25d282ccc0b6e49f1c5d57379175991bad1021f7",
+                "value": {
+                    "__big_int__": "475000000000000000000000"
+                }
+            },
+            {
+                "key": "con_ref.balances:8bf21c7dc3a4ff32996bf56a665e1efe3c9261cc95bbf82552c328585c863829",
+                "value": {
+                    "__big_int__": "950000000000000000000000"
+                }
+            },
+            {
+                "key": "con_ref.balances:ee06a34cf08bf72ce592d26d36b90c79daba2829ba9634992d034318160d49f8",
+                "value": {
+                    "__big_int__": "47500000000000000000000000"
+                }
+            },
+            {
+                "key": "con_ref.excluded:0000000000000000000000000000000000000000000000000000000000000000",
+                "value": true
+            },
+            {
+                "key": "con_ref.excluded:submission",
+                "value": true
+            },
+            {
+                "key": "con_ref.metadata:operator",
+                "value": "081e233f4e122a5fd79ff3c44f9d58848c3214f7110130936661394403100a9a"
+            },
+            {
+                "key": "con_ref.metadata:token_logo_url",
+                "value": ""
+            },
+            {
+                "key": "con_ref.metadata:token_name",
+                "value": "REFLECT TOKEN"
+            },
+            {
+                "key": "con_ref.metadata:token_symbol",
+                "value": "RFT"
+            },
+            {
+                "key": "con_ref.metadata:token_website",
+                "value": ""
+            },
+            {
+                "key": "con_ref.r_total",
+                "value": {
+                    "__big_int__": "97363272000000000000000000"
+                }
+            },
+            {
+                "key": "con_ref.t_balances:0000000000000000000000000000000000000000000000000000000000000000",
+                "value": 1054691
+            },
+            {
+                "key": "con_ref.t_total",
+                "value": 97363272
+            },
+            {
+                "key": "con_reflection.__code__",
+                "value": "__balances = Hash(default_value=0, contract='con_reflection', name='balances')\n__t_balances = Hash(default_value=0, contract='con_reflection', name=\n    't_balances')\n__metadata = Hash(contract='con_reflection', name='metadata')\n__excluded = Hash(default_value=False, contract='con_reflection', name=\n    'excluded')\n__r_total = Variable(contract='con_reflection', name='r_total')\n__t_total = Variable(contract='con_reflection', name='t_total')\n__approved = Hash(default_value=0, contract='con_reflection', name='approved')\nBURN_BPS = 200\nREFLECTION_BPS = 300\nTOTAL_BPS = 10000\nBURN_ADDRESS = '0' * 64\n\n\ndef ____():\n    initial_supply = 100000000\n    r_initial = initial_supply * 10 ** 18\n    __balances[ctx.caller] = r_initial\n    __r_total.set(r_initial)\n    __t_total.set(initial_supply)\n    __excluded[ctx.this] = True\n    __excluded[BURN_ADDRESS] = True\n    __t_balances[BURN_ADDRESS] = 0\n    __metadata['token_name'] = 'REFLECT TOKEN'\n    __metadata['token_symbol'] = 'RFT'\n    __metadata['token_logo_url'] = ''\n    __metadata['token_website'] = ''\n    __metadata['operator'] = ctx.caller\n\n\n@__export('con_reflection')\ndef change_metadata(key: str, value: Any):\n    assert ctx.caller == __metadata['operator'\n        ], 'Only operator can change metadata!'\n    __metadata[key] = value\n\n\n@__export('con_reflection')\ndef transfer(amount: int, to: str):\n    assert amount > 0, 'Cannot send negative balances!'\n    from_excluded = __excluded[ctx.caller]\n    to_excluded = __excluded[to]\n    rate = __r_total.get() * TOTAL_BPS // __t_total.get()\n    if not from_excluded:\n        assert __balances[ctx.caller\n            ] >= amount * rate // TOTAL_BPS, 'Not enough coins to send!'\n        r_amount = amount * rate // TOTAL_BPS\n    else:\n        assert __t_balances[ctx.caller] >= amount, 'Not enough coins to send!'\n        r_amount = amount * rate // TOTAL_BPS\n    burn_amount = amount * BURN_BPS // TOTAL_BPS\n    reflection_amount = amount * REFLECTION_BPS // TOTAL_BPS\n    transfer_amount = amount - burn_amount - reflection_amount\n    if from_excluded:\n        if to_excluded:\n            __t_balances[ctx.caller] -= amount\n            __t_balances[to] += transfer_amount\n            __t_balances[BURN_ADDRESS] += burn_amount\n        else:\n            __t_balances[ctx.caller] -= amount\n            __balances[to] += transfer_amount * rate // TOTAL_BPS\n            __t_balances[BURN_ADDRESS] += burn_amount\n    elif to_excluded:\n        __balances[ctx.caller] -= r_amount\n        __t_balances[to] += transfer_amount\n        __t_balances[BURN_ADDRESS] += burn_amount\n    else:\n        __balances[ctx.caller] -= r_amount\n        __balances[to] += transfer_amount * rate // TOTAL_BPS\n        __t_balances[BURN_ADDRESS] += burn_amount\n    __t_total.set(__t_total.get() - burn_amount)\n    __r_total.set(__r_total.get() - (burn_amount + reflection_amount) *\n        rate // TOTAL_BPS)\n    return f'Transferred {amount}'\n\n\n@__export('con_reflection')\ndef approve(amount: int, to: str):\n    assert amount > 0, 'Cannot approve negative balances!'\n    __approved[ctx.caller, to] = amount\n    return f'Approved {amount} for {to}'\n\n\n@__export('con_reflection')\ndef transfer_from(amount: int, to: str, main_account: str):\n    assert amount > 0, 'Cannot send negative balances!'\n    assert __approved[main_account, ctx.caller\n        ] >= amount, 'Not enough coins approved!'\n    from_excluded = __excluded[main_account]\n    to_excluded = __excluded[to]\n    rate = __r_total.get() * TOTAL_BPS // __t_total.get()\n    if not from_excluded:\n        assert __balances[main_account\n            ] >= amount * rate // TOTAL_BPS, 'Not enough coins!'\n        r_amount = amount * rate // TOTAL_BPS\n    else:\n        assert __t_balances[main_account] >= amount, 'Not enough coins!'\n        r_amount = amount * rate // TOTAL_BPS\n    burn_amount = amount * BURN_BPS // TOTAL_BPS\n    reflection_amount = amount * REFLECTION_BPS // TOTAL_BPS\n    transfer_amount = amount - burn_amount - reflection_amount\n    __approved[main_account, ctx.caller] -= amount\n    if from_excluded:\n        if to_excluded:\n            __t_balances[main_account] -= amount\n            __t_balances[to] += transfer_amount\n            __t_balances[BURN_ADDRESS] += burn_amount\n        else:\n            __t_balances[main_account] -= amount\n            __balances[to] += transfer_amount * rate // TOTAL_BPS\n            __t_balances[BURN_ADDRESS] += burn_amount\n    elif to_excluded:\n        __balances[main_account] -= r_amount\n        __t_balances[to] += transfer_amount\n        __t_balances[BURN_ADDRESS] += burn_amount\n    else:\n        __balances[main_account] -= r_amount\n        __balances[to] += transfer_amount * rate // TOTAL_BPS\n        __t_balances[BURN_ADDRESS] += burn_amount\n    __t_total.set(__t_total.get() - burn_amount)\n    __r_total.set(__r_total.get() - (burn_amount + reflection_amount) *\n        rate // TOTAL_BPS)\n    return f'Sent {amount} to {to} from {main_account}'\n\n\n@__export('con_reflection')\ndef balance_of(address: str):\n    if __excluded[address]:\n        return __t_balances[address]\n    return __balances[address] * __t_total.get() // __r_total.get()\n\n\n@__export('con_reflection')\ndef allowance(owner: str, spender: str):\n    return __approved[owner, spender]\n\n\n@__export('con_reflection')\ndef get_total_supply():\n    return __t_total.get()\n\n\n@__export('con_reflection')\ndef exclude_from_rewards(address: str):\n    assert ctx.caller == __metadata['operator'], 'Only operator can exclude!'\n    assert not __excluded[address], 'Address already excluded!'\n    __excluded[address] = True\n    t_amount = balance_of(address)\n    __balances[address] = 0\n    __t_balances[address] = t_amount\n\n\n@__export('con_reflection')\ndef include_in_rewards(address: str):\n    assert ctx.caller == __metadata['operator'], 'Only operator can include!'\n    assert __excluded[address], 'Address not excluded!'\n    t_amount = __t_balances[address]\n    rate = __r_total.get() * TOTAL_BPS // __t_total.get()\n    __excluded[address] = False\n    __t_balances[address] = 0\n    __balances[address] = t_amount * rate // TOTAL_BPS\n"
+            },
+            {
+                "key": "con_reflection.__developer__",
+                "value": "081e233f4e122a5fd79ff3c44f9d58848c3214f7110130936661394403100a9a"
+            },
+            {
+                "key": "con_reflection.__submitted__",
+                "value": {
+                    "__time__": [
+                        2025,
+                        2,
+                        1,
+                        1,
+                        17,
+                        29,
+                        0
+                    ]
+                }
+            },
+            {
+                "key": "con_reflection.balances:081e233f4e122a5fd79ff3c44f9d58848c3214f7110130936661394403100a9a",
+                "value": {
+                    "__big_int__": "86160028325883692293126128"
+                }
+            },
+            {
+                "key": "con_reflection.balances:7fe83202b3130727ca8af23c25d282ccc0b6e49f1c5d57379175991bad1021f6",
+                "value": {
+                    "__big_int__": "11723116518511139459060117"
+                }
+            },
+            {
+                "key": "con_reflection.balances:7fe83202b3130727ca8af23c25d282ccc0b6e49f1c5d57379175991bad1021f7",
+                "value": {
+                    "__big_int__": "474857471494298859771952"
+                }
+            },
+            {
+                "key": "con_reflection.balances:8bf21c7dc3a4ff32996bf56a665e1efe3c9261cc95bbf82552c328585c863829",
+                "value": {
+                    "__big_int__": "950000000000000000000000"
+                }
+            },
+            {
+                "key": "con_reflection.excluded:0000000000000000000000000000000000000000000000000000000000000000",
+                "value": true
+            },
+            {
+                "key": "con_reflection.excluded:submission",
+                "value": true
+            },
+            {
+                "key": "con_reflection.metadata:operator",
+                "value": "081e233f4e122a5fd79ff3c44f9d58848c3214f7110130936661394403100a9a"
+            },
+            {
+                "key": "con_reflection.metadata:token_logo_url",
+                "value": ""
+            },
+            {
+                "key": "con_reflection.metadata:token_name",
+                "value": "REFLECT TOKEN"
+            },
+            {
+                "key": "con_reflection.metadata:token_symbol",
+                "value": "RFT"
+            },
+            {
+                "key": "con_reflection.metadata:token_website",
+                "value": ""
+            },
+            {
+                "key": "con_reflection.r_total",
+                "value": {
+                    "__big_int__": "99308002315889130611958198"
+                }
+            },
+            {
+                "key": "con_reflection.t_balances:0000000000000000000000000000000000000000000000000000000000000000",
+                "value": 276913
+            },
+            {
+                "key": "con_reflection.t_total",
+                "value": 99723087
+            },
+            {
                 "key": "con_s1.__code__",
                 "value": "random.seed()\n__game = Hash(contract='con_s1', name='game')\n__turtleOwners = Hash(default_value=None, contract='con_s1', name=\n    'turtleOwners')\n__bets = Hash(default_value=0, contract='con_s1', name='bets')\n\n\ndef ____():\n    __game['owner'] = ctx.caller\n    __game['totalRaces'] = 0\n    __game['commission'] = decimal('0.02')\n    __game['turtleData', 'Red', 'price'] = 10\n    __game['turtleData', 'Red', 'probability'] = decimal('0.25')\n    __game['turtleData', 'Green', 'price'] = 20\n    __game['turtleData', 'Green', 'probability'] = decimal('0.2')\n    __game['turtleData', 'Blue', 'price'] = 15\n    __game['turtleData', 'Blue', 'probability'] = decimal('0.25')\n    __game['turtleData', 'Yellow', 'price'] = 5\n    __game['turtleData', 'Yellow', 'probability'] = decimal('0.15')\n    __game['turtleData', 'Purple', 'price'] = 50\n    __game['turtleData', 'Purple', 'probability'] = decimal('0.15')\n\n\n@__export('con_s1')\ndef buy_turtle(turtle_name: str, token_contract: str):\n    assert __game['turtleData', turtle_name, 'price'], 'Invalid turtle'\n    assert __turtleOwners[turtle_name\n        ] is None, 'Turtle already owned by another player'\n    amount = __game['turtleData', turtle_name, 'price']\n    assert amount > 0, 'Bet amount must be greater than zero'\n    token = importlib.import_module(token_contract)\n    token.transfer_from(amount=amount, to=ctx.this, main_account=ctx.caller)\n    __turtleOwners[turtle_name] = ctx.caller\n    __bets[turtle_name] += amount\n\n\n@__export('con_s1')\ndef start_race():\n    racing_turtles = []\n    probabilities = []\n    for turtle_name in ['Red', 'Green', 'Blue', 'Yellow', 'Purple']:\n        if __turtleOwners[turtle_name] is not None:\n            racing_turtles.append(turtle_name)\n            probabilities.append(__game['turtleData', turtle_name,\n                'probability'])\n    assert len(racing_turtles\n        ) >= 2, 'At least two turtles must have bets to start the race'\n    cumulative_probabilities = []\n    cumulative_sum = 0\n    for probability in probabilities:\n        cumulative_sum += probability\n        cumulative_probabilities.append(cumulative_sum)\n    assert cumulative_sum == 1, 'Probabilities must sum to 1'\n    random_number = random.randint(0, 100) / decimal('100.0')\n    winning_turtle = None\n    index = 0\n    for cumulative_probability in cumulative_probabilities:\n        if random_number <= cumulative_probability:\n            winning_turtle = racing_turtles[index]\n            break\n        index += 1\n    if winning_turtle is None:\n        winning_turtle = racing_turtles[-1]\n    total_bet_pool = 0\n    for turtle_name in ['Red', 'Green', 'Blue', 'Yellow', 'Purple']:\n        if __bets[turtle_name] > 0:\n            total_bet_pool += __bets[turtle_name]\n    winnings = total_bet_pool * (1 - __game['commission'])\n    winner = __turtleOwners[winning_turtle]\n    token = importlib.import_module('currency')\n    token.transfer(amount=winnings, to=winner)\n    __game['totalRaces'] += 1\n    __bets.clear()\n    __turtleOwners.clear()\n    return f'The {winning_turtle} Turtle wins!'\n\n\n@__export('con_s1')\ndef change_owner(new_owner: str):\n    assert ctx.caller == __game['owner'], 'Only the owner can change the owner'\n    __game['owner'] = new_owner\n\n\n@__export('con_s1')\ndef change_commission(new_commission: float):\n    assert ctx.caller == __game['owner'\n        ], 'Only the owner can change the commission'\n    assert 0 <= new_commission < 1, 'Commission must be between 0 and 1'\n    __game['commission'] = new_commission\n"
             },
@@ -14439,7 +14717,7 @@
             {
                 "key": "con_testtoken.balances:39a982e221a2805a585fad76cc4147daba631ff8e64e640a4ff3815dc780e7f0",
                 "value": {
-                    "__fixed__": "9891791845801756.562119255495011837685026115088"
+                    "__fixed__": "9891791936455267.854554259847373407561349289242"
                 }
             },
             {
@@ -14499,7 +14777,7 @@
             {
                 "key": "con_testtoken.balances:con_dex_pairs2",
                 "value": {
-                    "__fixed__": "989179292.337691103385709723481308325324"
+                    "__fixed__": "898525781.04525609903334815360498515117"
                 }
             },
             {
@@ -16150,28 +16428,208 @@
                 }
             },
             {
+                "key": "con_xyz.__code__",
+                "value": "import currency\n__manager = Variable(contract='con_xyz', name='manager')\n__names = Hash(default_value=False, contract='con_xyz', name='names')\n__balances = Hash(default_value=0, contract='con_xyz', name='balances')\n__approvals = Hash(default_value=0, contract='con_xyz', name='approvals')\n__expiry_times = Hash(default_value=None, contract='con_xyz', name=\n    'expiry_times')\n__owners = Hash(default_value=None, contract='con_xyz', name='owners')\n__mint_price = Variable(contract='con_xyz', name='mint_price')\n__royalty_fee_percentage = Variable(contract='con_xyz', name=\n    'royalty_fee_percentage')\n__registration_period = Variable(contract='con_xyz', name='registration_period'\n    )\n__contracts_allowlist = Variable(contract='con_xyz', name='contracts_allowlist'\n    )\n__main_name_to_address = Hash(default_value=None, contract='con_xyz', name=\n    'main_name_to_address')\n__address_to_main_name = Hash(default_value=None, contract='con_xyz', name=\n    'address_to_main_name')\n\n\ndef ____():\n    __manager.set(ctx.caller)\n    __contracts_allowlist.set([])\n    __mint_price.set(1)\n    __royalty_fee_percentage.set(2)\n    __registration_period.set(365)\n\n\ndef __assert_is_manager():\n    assert ctx.caller == __manager.get(), 'You are not the manager'\n\n\ndef __assert_is_owner(address: str, name: str):\n    assert __balances[address, name] == 1, 'You are not the owner of this name'\n\n\ndef __assert_if_contract_is_approved(contract: str):\n    if 'con_' in contract:\n        assert contract in __contracts_allowlist.get(\n            ), 'This contract is not allowed to interact with this contract'\n\n\ndef __assert_is_approved_for_transfer(main_account: str, to: str, name: str):\n    assert __approvals[main_account, to, name\n        ] == 1, 'Name is not approved for transfer'\n\n\ndef __is_expired(name: str):\n    expiry = __expiry_times[name]\n    if expiry is None:\n        return True\n    return now >= expiry\n\n\ndef __assert_is_not_expired(name: str):\n    assert not __is_expired(name), 'Name is expired'\n\n\n@__export('con_xyz')\ndef mint_name(name: str):\n    __assert_if_contract_is_approved(ctx.caller)\n    name = name.lower()\n    assert name.isalnum() and name.isascii(\n        ), 'Name must be alphanumeric and ascii'\n    assert len(name) >= 3, 'The minimum length is 3 characters'\n    assert len(name) <= 32, 'The maximum length is 32 characters'\n    if __names[name] != False:\n        assert __is_expired(name\n            ), 'Name already exists and has not expired yet.'\n    currency.transfer_from(amount=__mint_price.get(), to=__manager.get(),\n        main_account=ctx.caller)\n    __names[name] = {}\n    __expiry_times[name] = now + datetime.timedelta(days=\n        __registration_period.get())\n    __balances[ctx.caller, name] = 1\n    __owners[name] = ctx.caller\n\n\n@__export('con_xyz')\ndef transfer(name: str, to: str):\n    __assert_is_not_expired(name)\n    assert name != '', 'Please specify the Name you want to transfer'\n    __assert_is_owner(ctx.caller, name)\n    __balances[ctx.caller, name] = 0\n    __balances[to, name] = 1\n    __main_name_to_address[name] = None\n    __address_to_main_name[ctx.caller] = None\n    __names[name] = {}\n    __owners[name] = to\n\n\n@__export('con_xyz')\ndef approve(name: str, to: str):\n    __assert_is_not_expired(name)\n    __assert_is_owner(ctx.caller, name)\n    __approvals[ctx.caller, to, name] = 1\n\n\n@__export('con_xyz')\ndef revoke_approval(name: str, to: str):\n    __assert_is_not_expired(name)\n    __assert_is_owner(ctx.caller, name)\n    __approvals[ctx.caller, to, name] = 0\n\n\n@__export('con_xyz')\ndef transfer_from(name: str, to: str, main_account: str):\n    __assert_if_contract_is_approved(ctx.caller)\n    assert name != '', 'Please specify the Name you want to transfer'\n    __assert_is_not_expired(name)\n    __assert_is_owner(main_account, name)\n    __assert_is_approved_for_transfer(main_account, to, name)\n    __approvals[main_account, to, name] = 0\n    __balances[main_account, name] = 0\n    __balances[to, name] = 1\n    __main_name_to_address[name] = None\n    __address_to_main_name[main_account] = None\n    __names[name] = {}\n    __owners[name] = to\n\n\n@__export('con_xyz')\ndef set_main_name_to_caller(name: str):\n    __assert_is_not_expired(name)\n    __assert_is_owner(ctx.caller, name)\n    __main_name_to_address[name] = ctx.caller\n    __address_to_main_name[ctx.caller] = name\n\n\n@__export('con_xyz')\ndef set_data(name: str, data: dict):\n    __assert_is_not_expired(name)\n    __assert_is_owner(ctx.caller, name)\n    __names[name] = data\n\n\n@__export('con_xyz')\ndef get_main_name_to_address(name: str):\n    address = __main_name_to_address[name]\n    if address is None or __is_expired(name):\n        return None\n    return address\n\n\n@__export('con_xyz')\ndef get_address_to_main_name(address: str):\n    name = __address_to_main_name[address]\n    if name is None or __is_expired(name):\n        return None\n    return name\n\n\n@__export('con_xyz')\ndef get_owner(name: str):\n    owner = __owners[name]\n    if owner is None or __is_expired(name):\n        return None\n    return owner\n\n\n@__export('con_xyz')\ndef get_data(name: str):\n    return __names[name]\n\n\n@__export('con_xyz')\ndef is_owner(name: str, address: str):\n    return __balances[address, name] == 1 and not __is_expired(name)\n\n\n@__export('con_xyz')\ndef renew_name(name: str):\n    __assert_is_not_expired(name)\n    __assert_is_owner(ctx.caller, name)\n    currency.transfer_from(amount=__mint_price.get(), to=__manager.get(),\n        main_account=ctx.caller)\n    __expiry_times[name] = __expiry_times[name] + datetime.timedelta(days=\n        __registration_period.get())\n\n\n@__export('con_xyz')\ndef set_mint_price(price: int):\n    __assert_is_manager()\n    __mint_price.set(price)\n\n\n@__export('con_xyz')\ndef set_royalty_fee_percentage(percentage: int):\n    __assert_is_manager()\n    __royalty_fee_percentage.set(percentage)\n\n\n@__export('con_xyz')\ndef set_manager(new_manager: str):\n    __assert_is_manager()\n    __manager.set(new_manager)\n\n\n@__export('con_xyz')\ndef set_contract_allowlist(contracts: list):\n    __assert_is_manager()\n    __contracts_allowlist.set(contracts)\n\n\n@__export('con_xyz')\ndef set_registration_period(period: int):\n    __assert_is_manager()\n    __registration_period.set(period)\n"
+            },
+            {
+                "key": "con_xyz.__developer__",
+                "value": "7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e"
+            },
+            {
+                "key": "con_xyz.__submitted__",
+                "value": {
+                    "__time__": [
+                        2025,
+                        1,
+                        31,
+                        12,
+                        3,
+                        21,
+                        0
+                    ]
+                }
+            },
+            {
+                "key": "con_xyz.contracts_allowlist",
+                "value": []
+            },
+            {
+                "key": "con_xyz.manager",
+                "value": "7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e"
+            },
+            {
+                "key": "con_xyz.mint_price",
+                "value": 1
+            },
+            {
+                "key": "con_xyz.registration_period",
+                "value": 365
+            },
+            {
+                "key": "con_xyz.royalty_fee_percentage",
+                "value": 2
+            },
+            {
+                "key": "con_zyx.__code__",
+                "value": "import currency\n__manager = Variable(contract='con_zyx', name='manager')\n__names = Hash(default_value=False, contract='con_zyx', name='names')\n__balances = Hash(default_value=0, contract='con_zyx', name='balances')\n__approvals = Hash(default_value=0, contract='con_zyx', name='approvals')\n__expiry_times = Hash(default_value=None, contract='con_zyx', name=\n    'expiry_times')\n__owners = Hash(default_value=None, contract='con_zyx', name='owners')\n__mint_price = Variable(contract='con_zyx', name='mint_price')\n__royalty_fee_percentage = Variable(contract='con_zyx', name=\n    'royalty_fee_percentage')\n__registration_period = Variable(contract='con_zyx', name='registration_period'\n    )\n__contracts_allowlist = Variable(contract='con_zyx', name='contracts_allowlist'\n    )\n__main_name_to_address = Hash(default_value=None, contract='con_zyx', name=\n    'main_name_to_address')\n__address_to_main_name = Hash(default_value=None, contract='con_zyx', name=\n    'address_to_main_name')\n\n\ndef ____():\n    __manager.set(ctx.caller)\n    __contracts_allowlist.set([])\n    __mint_price.set(1)\n    __royalty_fee_percentage.set(2)\n    __registration_period.set(365)\n\n\ndef __assert_is_manager():\n    assert ctx.caller == __manager.get(), 'You are not the manager'\n\n\ndef __assert_is_owner(address: str, name: str):\n    assert __balances[address, name] == 1, 'You are not the owner of this name'\n\n\ndef __assert_if_contract_is_approved(contract: str):\n    if 'con_' in contract:\n        assert contract in __contracts_allowlist.get(\n            ), 'This contract is not allowed to interact with this contract'\n\n\ndef __assert_is_approved_for_transfer(main_account: str, to: str, name: str):\n    assert __approvals[main_account, to, name\n        ] == 1, 'Name is not approved for transfer'\n\n\ndef __is_expired(name: str):\n    expiry = __expiry_times[name]\n    if expiry is None:\n        return True\n    return now >= expiry\n\n\ndef __assert_is_not_expired(name: str):\n    assert not __is_expired(name), 'Name is expired'\n\n\n@__export('con_zyx')\ndef mint_name(name: str):\n    __assert_if_contract_is_approved(ctx.caller)\n    name = name.lower()\n    assert name.isalnum() and name.isascii(\n        ), 'Name must be alphanumeric and ascii'\n    assert len(name) >= 3, 'The minimum length is 3 characters'\n    assert len(name) <= 32, 'The maximum length is 32 characters'\n    if __names[name] != False:\n        assert __is_expired(name\n            ), 'Name already exists and has not expired yet.'\n    currency.transfer_from(amount=__mint_price.get(), to=__manager.get(),\n        main_account=ctx.caller)\n    __names[name] = {}\n    __expiry_times[name] = now + datetime.timedelta(days=\n        __registration_period.get())\n    __balances[ctx.caller, name] = 1\n    __owners[name] = ctx.caller\n\n\n@__export('con_zyx')\ndef transfer(name: str, to: str):\n    __assert_is_not_expired(name)\n    assert name != '', 'Please specify the Name you want to transfer'\n    __assert_is_owner(ctx.caller, name)\n    __balances[ctx.caller, name] = 0\n    __balances[to, name] = 1\n    __main_name_to_address[name] = None\n    __address_to_main_name[ctx.caller] = None\n    __names[name] = {}\n    __owners[name] = to\n\n\n@__export('con_zyx')\ndef approve(name: str, to: str):\n    __assert_is_not_expired(name)\n    __assert_is_owner(ctx.caller, name)\n    __approvals[ctx.caller, to, name] = 1\n\n\n@__export('con_zyx')\ndef revoke_approval(name: str, to: str):\n    __assert_is_not_expired(name)\n    __assert_is_owner(ctx.caller, name)\n    __approvals[ctx.caller, to, name] = 0\n\n\n@__export('con_zyx')\ndef transfer_from(name: str, to: str, main_account: str):\n    __assert_if_contract_is_approved(ctx.caller)\n    assert name != '', 'Please specify the Name you want to transfer'\n    __assert_is_not_expired(name)\n    __assert_is_owner(main_account, name)\n    __assert_is_approved_for_transfer(main_account, to, name)\n    __approvals[main_account, to, name] = 0\n    __balances[main_account, name] = 0\n    __balances[to, name] = 1\n    __main_name_to_address[name] = None\n    __address_to_main_name[main_account] = None\n    __names[name] = {}\n    __owners[name] = to\n\n\n@__export('con_zyx')\ndef set_main_name_to_caller(name: str):\n    __assert_is_not_expired(name)\n    __assert_is_owner(ctx.caller, name)\n    __main_name_to_address[name] = ctx.caller\n    __address_to_main_name[ctx.caller] = name\n\n\n@__export('con_zyx')\ndef set_data(name: str, data: dict):\n    __assert_is_not_expired(name)\n    __assert_is_owner(ctx.caller, name)\n    __names[name] = data\n\n\n@__export('con_zyx')\ndef get_main_name_to_address(name: str):\n    address = __main_name_to_address[name]\n    if address is None or __is_expired(name):\n        return None\n    return address\n\n\n@__export('con_zyx')\ndef get_address_to_main_name(address: str):\n    name = __address_to_main_name[address]\n    if name is None or __is_expired(name):\n        return None\n    return name\n\n\n@__export('con_zyx')\ndef get_owner(name: str):\n    owner = __owners[name]\n    if owner is None or __is_expired(name):\n        return None\n    return owner\n\n\n@__export('con_zyx')\ndef get_expiry_time(name: str):\n    return __expiry_times[name]\n\n\n@__export('con_zyx')\ndef get_data(name: str):\n    return __names[name]\n\n\n@__export('con_zyx')\ndef is_owner(name: str, address: str):\n    return __balances[address, name] == 1 and not __is_expired(name)\n\n\n@__export('con_zyx')\ndef renew_name(name: str):\n    __assert_is_not_expired(name)\n    __assert_is_owner(ctx.caller, name)\n    currency.transfer_from(amount=__mint_price.get(), to=__manager.get(),\n        main_account=ctx.caller)\n    __expiry_times[name] = __expiry_times[name] + datetime.timedelta(days=\n        __registration_period.get())\n\n\n@__export('con_zyx')\ndef set_mint_price(price: int):\n    __assert_is_manager()\n    __mint_price.set(price)\n\n\n@__export('con_zyx')\ndef set_royalty_fee_percentage(percentage: int):\n    __assert_is_manager()\n    __royalty_fee_percentage.set(percentage)\n\n\n@__export('con_zyx')\ndef set_manager(new_manager: str):\n    __assert_is_manager()\n    __manager.set(new_manager)\n\n\n@__export('con_zyx')\ndef set_contract_allowlist(contracts: list):\n    __assert_is_manager()\n    __contracts_allowlist.set(contracts)\n\n\n@__export('con_zyx')\ndef set_registration_period(period: int):\n    __assert_is_manager()\n    __registration_period.set(period)\n"
+            },
+            {
+                "key": "con_zyx.__developer__",
+                "value": "7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e"
+            },
+            {
+                "key": "con_zyx.__submitted__",
+                "value": {
+                    "__time__": [
+                        2025,
+                        1,
+                        31,
+                        12,
+                        3,
+                        36,
+                        0
+                    ]
+                }
+            },
+            {
+                "key": "con_zyx.address_to_main_name:7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e",
+                "value": "test"
+            },
+            {
+                "key": "con_zyx.balances:123:test4",
+                "value": 1
+            },
+            {
+                "key": "con_zyx.balances:7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e:test",
+                "value": 1
+            },
+            {
+                "key": "con_zyx.balances:7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e:test2",
+                "value": 1
+            },
+            {
+                "key": "con_zyx.balances:7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e:test4",
+                "value": 0
+            },
+            {
+                "key": "con_zyx.balances:7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e:test5",
+                "value": 1
+            },
+            {
+                "key": "con_zyx.contracts_allowlist",
+                "value": []
+            },
+            {
+                "key": "con_zyx.expiry_times:test",
+                "value": {
+                    "__time__": [
+                        2026,
+                        1,
+                        31,
+                        12,
+                        25,
+                        26,
+                        0
+                    ]
+                }
+            },
+            {
+                "key": "con_zyx.expiry_times:test2",
+                "value": {
+                    "__time__": [
+                        2026,
+                        1,
+                        31,
+                        12,
+                        26,
+                        17,
+                        0
+                    ]
+                }
+            },
+            {
+                "key": "con_zyx.expiry_times:test4",
+                "value": {
+                    "__time__": [
+                        2027,
+                        1,
+                        31,
+                        12,
+                        28,
+                        20,
+                        0
+                    ]
+                }
+            },
+            {
+                "key": "con_zyx.expiry_times:test5",
+                "value": {
+                    "__time__": [
+                        2026,
+                        1,
+                        31,
+                        12,
+                        44,
+                        20,
+                        0
+                    ]
+                }
+            },
+            {
+                "key": "con_zyx.main_name_to_address:test",
+                "value": "7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e"
+            },
+            {
+                "key": "con_zyx.manager",
+                "value": "7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e"
+            },
+            {
+                "key": "con_zyx.mint_price",
+                "value": 1
+            },
+            {
+                "key": "con_zyx.names:test",
+                "value": {}
+            },
+            {
+                "key": "con_zyx.names:test2",
+                "value": {}
+            },
+            {
+                "key": "con_zyx.names:test4",
+                "value": {}
+            },
+            {
+                "key": "con_zyx.names:test5",
+                "value": {}
+            },
+            {
+                "key": "con_zyx.owners:test",
+                "value": "7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e"
+            },
+            {
+                "key": "con_zyx.owners:test2",
+                "value": "7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e"
+            },
+            {
+                "key": "con_zyx.owners:test4",
+                "value": "123"
+            },
+            {
+                "key": "con_zyx.owners:test5",
+                "value": "7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e"
+            },
+            {
+                "key": "con_zyx.registration_period",
+                "value": 365
+            },
+            {
+                "key": "con_zyx.royalty_fee_percentage",
+                "value": 2
+            },
+            {
                 "key": "currency.__code__",
                 "value": "__balances = Hash(default_value=0, contract='currency', name='balances')\n__metadata = Hash(contract='currency', name='metadata')\n__permits = Hash(contract='currency', name='permits')\n__streams = Hash(contract='currency', name='streams')\n__TransferEvent = LogEvent(event='Transfer', params={'from': {'type': str,\n    'idx': True}, 'to': {'type': str, 'idx': True}, 'amount': {'type': (int,\n    float, decimal)}}, contract='currency', name='TransferEvent')\n__ApproveEvent = LogEvent(event='Approve', params={'from': {'type': str,\n    'idx': True}, 'to': {'type': str, 'idx': True}, 'amount': {'type': (int,\n    float, decimal)}}, contract='currency', name='ApproveEvent')\n__StreamCreatedEvent = LogEvent(event='StreamCreated', params={'sender': {\n    'type': str, 'idx': True}, 'receiver': {'type': str, 'idx': True},\n    'stream_id': {'type': str, 'idx': True}, 'rate': {'type': (int, float,\n    decimal)}, 'begins': {'type': str}, 'closes': {'type': str}}, contract=\n    'currency', name='StreamCreatedEvent')\n__StreamBalanceEvent = LogEvent(event='StreamBalance', params={'receiver':\n    {'type': str, 'idx': True}, 'sender': {'type': str, 'idx': True},\n    'stream_id': {'type': str, 'idx': True}, 'amount': {'type': (int, float,\n    decimal)}, 'balancer': {'type': str}}, contract='currency', name=\n    'StreamBalanceEvent')\n__StreamCloseChangeEvent = LogEvent(event='StreamCloseChange', params={\n    'receiver': {'type': str, 'idx': True}, 'sender': {'type': str, 'idx': \n    True}, 'stream_id': {'type': str, 'idx': True}, 'time': {'type': str}},\n    contract='currency', name='StreamCloseChangeEvent')\n__StreamForfeitEvent = LogEvent(event='StreamForfeit', params={'receiver':\n    {'type': str, 'idx': True}, 'sender': {'type': str, 'idx': True},\n    'stream_id': {'type': str, 'idx': True}, 'time': {'type': str}},\n    contract='currency', name='StreamForfeitEvent')\n__StreamFinalizedEvent = LogEvent(event='StreamFinalized', params={\n    'receiver': {'type': str, 'idx': True}, 'sender': {'type': str, 'idx': \n    True}, 'stream_id': {'type': str, 'idx': True}, 'time': {'type': str}},\n    contract='currency', name='StreamFinalizedEvent')\n\n\ndef ____(vk: str):\n    __balances[vk] = decimal('5555555.55')\n    __balances['team_vesting'] = decimal('16666666.65')\n    __balances['dao'] = decimal('10999999.989')\n    __balances['dao_funding_stream'] = decimal('22333333.311')\n    __balances['team_lock'] += decimal('49999999.95')\n    __balances[vk] += decimal('5555555.55')\n    __metadata['token_name'] = 'XIAN'\n    __metadata['token_symbol'] = 'XIAN'\n    __metadata['token_logo_url'] = 'https://xian.org/assets/img/logo.svg'\n    __metadata['token_website'] = 'https://xian.org'\n    __metadata['operator'] = 'team_lock'\n    __setup_seed_stream(stream_id='team_vesting', sender='team_vesting',\n        receiver='team_lock', rate=decimal('0.10575725568804825'),\n        duration_days=1824)\n    __setup_seed_stream(stream_id='dao_funding_stream', sender=\n        'dao_funding_stream', receiver='dao', rate=decimal(\n        '0.1180848122715852'), duration_days=2189)\n\n\ndef __setup_seed_stream(stream_id: str, sender: str, receiver: str, rate:\n    float, duration_days: int):\n    __streams[stream_id, 'status'] = 'active'\n    __streams[stream_id, 'begins'] = now\n    __streams[stream_id, 'closes'] = now + datetime.timedelta(days=\n        duration_days)\n    __streams[stream_id, 'receiver'] = receiver\n    __streams[stream_id, 'sender'] = sender\n    __streams[stream_id, 'rate'] = rate\n    __streams[stream_id, 'claimed'] = 0\n\n\n@__export('currency')\ndef change_metadata(key: str, value: Any):\n    assert ctx.caller == __metadata['operator'\n        ], 'Only operator can set metadata.'\n    __metadata[key] = value\n\n\n@__export('currency')\ndef transfer(amount: float, to: str):\n    assert amount > 0, 'Cannot send negative balances.'\n    assert __balances[ctx.caller] >= amount, 'Not enough coins to send.'\n    __balances[ctx.caller] -= amount\n    __balances[to] += amount\n    __TransferEvent({'from': ctx.caller, 'to': to, 'amount': amount})\n\n\n@__export('currency')\ndef approve(amount: float, to: str):\n    assert amount >= 0, 'Cannot approve negative balances.'\n    __balances[ctx.caller, to] = amount\n    __ApproveEvent({'from': ctx.caller, 'to': to, 'amount': amount})\n\n\n@__export('currency')\ndef transfer_from(amount: float, to: str, main_account: str):\n    assert amount > 0, 'Cannot send negative balances.'\n    assert __balances[main_account, ctx.caller\n        ] >= amount, f'Not enough coins approved to send. You have {__balances[main_account, ctx.caller]} approved and are trying to spend {amount}'\n    assert __balances[main_account] >= amount, 'Not enough coins to send.'\n    __balances[main_account, ctx.caller] -= amount\n    __balances[main_account] -= amount\n    __balances[to] += amount\n    __TransferEvent({'from': main_account, 'to': to, 'amount': amount})\n\n\n@__export('currency')\ndef balance_of(address: str):\n    return __balances[address]\n\n\n@__export('currency')\ndef permit(owner: str, spender: str, value: float, deadline: str, signature:\n    str):\n    deadline = __strptime_ymdhms(deadline)\n    permit_msg = __construct_permit_msg(owner, spender, value, str(deadline))\n    permit_hash = hashlib.sha3(permit_msg)\n    assert __permits[permit_hash] is None, 'Permit can only be used once.'\n    assert now < deadline, 'Permit has expired.'\n    assert value >= 0, 'Cannot approve negative balances!'\n    assert crypto.verify(owner, permit_msg, signature), 'Invalid signature.'\n    __balances[owner, spender] = value\n    __permits[permit_hash] = True\n    __ApproveEvent({'from': owner, 'to': spender, 'amount': value})\n    return permit_hash\n\n\ndef __construct_permit_msg(owner: str, spender: str, value: float, deadline:\n    str):\n    return f'{owner}:{spender}:{value}:{deadline}:{ctx.this}:{chain_id}'\n\n\nSENDER_KEY = 'sender'\nRECEIVER_KEY = 'receiver'\nSTATUS_KEY = 'status'\nBEGIN_KEY = 'begins'\nCLOSE_KEY = 'closes'\nRATE_KEY = 'rate'\nCLAIMED_KEY = 'claimed'\nSTREAM_ACTIVE = 'active'\nSTREAM_FINALIZED = 'finalized'\nSTREAM_FORFEIT = 'forfeit'\n\n\n@__export('currency')\ndef create_stream(receiver: str, rate: float, begins: str, closes: str):\n    begins = __strptime_ymdhms(begins)\n    closes = __strptime_ymdhms(closes)\n    sender = ctx.caller\n    stream_id = __perform_create_stream(sender, receiver, rate, begins, closes)\n    return stream_id\n\n\ndef __perform_create_stream(sender: str, receiver: str, rate: float, begins:\n    str, closes: str):\n    stream_id = hashlib.sha3(f'{sender}:{receiver}:{begins}:{closes}:{rate}')\n    assert __streams[stream_id, STATUS_KEY] is None, 'Stream already exists.'\n    assert begins < closes, 'Stream cannot begin after the close date.'\n    assert rate > 0, 'Rate must be greater than 0.'\n    __streams[stream_id, STATUS_KEY] = STREAM_ACTIVE\n    __streams[stream_id, BEGIN_KEY] = begins\n    __streams[stream_id, CLOSE_KEY] = closes\n    __streams[stream_id, RECEIVER_KEY] = receiver\n    __streams[stream_id, SENDER_KEY] = sender\n    __streams[stream_id, RATE_KEY] = rate\n    __streams[stream_id, CLAIMED_KEY] = 0\n    __StreamCreatedEvent({'sender': sender, 'receiver': receiver,\n        'stream_id': stream_id, 'rate': rate, 'begins': str(begins),\n        'closes': str(closes)})\n    return stream_id\n\n\n@__export('currency')\ndef create_stream_from_permit(sender: str, receiver: str, rate: float,\n    begins: str, closes: str, deadline: str, signature: str):\n    begins = __strptime_ymdhms(begins)\n    closes = __strptime_ymdhms(closes)\n    deadline = __strptime_ymdhms(deadline)\n    assert now < deadline, 'Permit has expired.'\n    permit_msg = __construct_stream_permit_msg(sender, receiver, rate,\n        begins, closes, deadline)\n    permit_hash = hashlib.sha3(permit_msg)\n    assert __permits[permit_hash] is None, 'Permit can only be used once.'\n    assert crypto.verify(sender, permit_msg, signature), 'Invalid signature.'\n    __permits[permit_hash] = True\n    return __perform_create_stream(sender, receiver, rate, begins, closes)\n\n\n@__export('currency')\ndef balance_stream(stream_id: str):\n    assert __streams[stream_id, STATUS_KEY], 'Stream does not exist.'\n    assert __streams[stream_id, STATUS_KEY\n        ] == STREAM_ACTIVE, 'You can only balance active streams.'\n    assert now > __streams[stream_id, BEGIN_KEY], 'Stream has not started yet.'\n    sender = __streams[stream_id, SENDER_KEY]\n    receiver = __streams[stream_id, RECEIVER_KEY]\n    assert ctx.caller in [sender, receiver\n        ], 'Only sender or receiver can balance a stream.'\n    closes = __streams[stream_id, CLOSE_KEY]\n    begins = __streams[stream_id, BEGIN_KEY]\n    rate = __streams[stream_id, RATE_KEY]\n    claimed = __streams[stream_id, CLAIMED_KEY]\n    outstanding_balance = __calc_outstanding_balance(begins, closes, rate,\n        claimed)\n    assert outstanding_balance > 0, 'No amount due on this stream.'\n    claimable_amount = __calc_claimable_amount(outstanding_balance, sender)\n    __balances[sender] -= claimable_amount\n    __balances[receiver] += claimable_amount\n    __streams[stream_id, CLAIMED_KEY] += claimable_amount\n    __StreamBalanceEvent({'receiver': receiver, 'sender': sender,\n        'stream_id': stream_id, 'amount': claimable_amount, 'balancer': ctx\n        .caller})\n\n\n@__export('currency')\ndef change_close_time(stream_id: str, new_close_time: str):\n    new_close_time = __strptime_ymdhms(new_close_time)\n    assert __streams[stream_id, STATUS_KEY], 'Stream does not exist.'\n    assert __streams[stream_id, STATUS_KEY\n        ] == STREAM_ACTIVE, 'Stream is not active.'\n    sender = __streams[stream_id, SENDER_KEY]\n    receiver = __streams[stream_id, RECEIVER_KEY]\n    assert ctx.caller == sender, 'Only sender can change the close time of a stream.'\n    if new_close_time < __streams[stream_id, BEGIN_KEY] and now < __streams[\n        stream_id, BEGIN_KEY]:\n        __streams[stream_id, CLOSE_KEY] = __streams[stream_id, BEGIN_KEY]\n    elif new_close_time <= now:\n        __streams[stream_id, CLOSE_KEY] = now\n    else:\n        __streams[stream_id, CLOSE_KEY] = new_close_time\n    __StreamCloseChangeEvent({'receiver': receiver, 'sender': sender,\n        'stream_id': stream_id, 'time': str(new_close_time)})\n\n\n@__export('currency')\ndef finalize_stream(stream_id: str):\n    assert __streams[stream_id, STATUS_KEY], 'Stream does not exist.'\n    assert __streams[stream_id, STATUS_KEY\n        ] == STREAM_ACTIVE, 'Stream is not active.'\n    sender = __streams[stream_id, 'sender']\n    receiver = __streams[stream_id, 'receiver']\n    assert ctx.caller in [sender, receiver\n        ], 'Only sender or receiver can finalize a stream.'\n    begins = __streams[stream_id, BEGIN_KEY]\n    closes = __streams[stream_id, CLOSE_KEY]\n    rate = __streams[stream_id, RATE_KEY]\n    claimed = __streams[stream_id, CLAIMED_KEY]\n    assert now <= closes, 'Stream has not closed yet.'\n    outstanding_balance = __calc_outstanding_balance(begins, closes, rate,\n        claimed)\n    assert outstanding_balance == 0, 'Stream has outstanding balance.'\n    __streams[stream_id, STATUS_KEY] = STREAM_FINALIZED\n    __StreamFinalizedEvent({'receiver': receiver, 'sender': sender,\n        'stream_id': stream_id, 'time': str(now)})\n\n\n@__export('currency')\ndef close_balance_finalize(stream_id: str):\n    change_close_time(stream_id=stream_id, new_close_time=str(now))\n    balance_finalize(stream_id=stream_id)\n\n\n@__export('currency')\ndef balance_finalize(stream_id: str):\n    balance_stream(stream_id=stream_id)\n    finalize_stream(stream_id=stream_id)\n\n\n@__export('currency')\ndef forfeit_stream(stream_id: str) ->str:\n    assert __streams[stream_id, STATUS_KEY], 'Stream does not exist.'\n    assert __streams[stream_id, STATUS_KEY\n        ] == STREAM_ACTIVE, 'Stream is not active.'\n    receiver = __streams[stream_id, RECEIVER_KEY]\n    sender = __streams[stream_id, SENDER_KEY]\n    assert ctx.caller == receiver, 'Only receiver can forfeit a stream.'\n    __streams[stream_id, STATUS_KEY] = STREAM_FORFEIT\n    __streams[stream_id, CLOSE_KEY] = now\n    __StreamForfeitEvent({'receiver': receiver, 'sender': sender,\n        'stream_id': stream_id, 'time': str(now)})\n\n\ndef __calc_outstanding_balance(begins: datetime.datetime, closes: datetime.\n    datetime, rate: float, claimed: float) ->float:\n    claimable_end_point = now if now < closes else closes\n    claimable_period = claimable_end_point - begins\n    claimable_seconds = claimable_period.seconds\n    amount_due = rate * claimable_seconds - claimed\n    return amount_due\n\n\ndef __calc_claimable_amount(amount_due: float, sender: str) ->float:\n    return amount_due if amount_due < __balances[sender] else __balances[sender\n        ]\n\n\ndef __construct_stream_permit_msg(sender: str, receiver: str, rate: float,\n    begins: str, closes: str, deadline: str) ->str:\n    return (\n        f'{sender}:{receiver}:{rate}:{begins}:{closes}:{deadline}:{ctx.this}:{chain_id}'\n        )\n\n\ndef __strptime_ymdhms(date_string: str) ->datetime.datetime:\n    return datetime.datetime.strptime(date_string, '%Y-%m-%d %H:%M:%S')\n"
-            },
-            {
-                "key": "currency.metadata:operator",
-                "value": "team_lock"
-            },
-            {
-                "key": "currency.metadata:token_logo_url",
-                "value": "https://xian.org/assets/img/logo.svg"
-            },
-            {
-                "key": "currency.metadata:token_name",
-                "value": "XIAN"
-            },
-            {
-                "key": "currency.metadata:token_symbol",
-                "value": "XIAN"
-            },
-            {
-                "key": "currency.metadata:token_website",
-                "value": "https://xian.org"
             },
             {
                 "key": "currency.__developer__",
@@ -16408,7 +16866,13 @@
             {
                 "key": "currency.balances:0813b6d7d7507c5f735821c32d06cd8f53e6d29807acb7bc92ab0dfe0417386e",
                 "value": {
-                    "__fixed__": "4499943.479"
+                    "__fixed__": "4499141.239"
+                }
+            },
+            {
+                "key": "currency.balances:081e233f4e122a5fd79ff3c44f9d58848c3214f7110130936661394403100a9a",
+                "value": {
+                    "__fixed__": "500163.487"
                 }
             },
             {
@@ -17630,7 +18094,7 @@
             {
                 "key": "currency.balances:39a982e221a2805a585fad76cc4147daba631ff8e64e640a4ff3815dc780e7f0",
                 "value": {
-                    "__fixed__": "9256.930399926559109328263824602773"
+                    "__fixed__": "9253.594999926559109328263824602773"
                 }
             },
             {
@@ -18173,6 +18637,12 @@
                 "key": "currency.balances:48a5d1351aefd2b1caf4f8ffb1b24fbd6be021d31fcf7f618112b1cde3a31645",
                 "value": {
                     "__fixed__": "0.00001"
+                }
+            },
+            {
+                "key": "currency.balances:48aac788986f398959113542b508fc56da7d3d4eb33e3db8ef3c8457c6fdb2f2",
+                "value": {
+                    "__fixed__": "1E+2"
                 }
             },
             {
@@ -19310,6 +19780,12 @@
                 }
             },
             {
+                "key": "currency.balances:7067cf020cfeecd001b656b924639713efa3affc71ecd7db6f4a3e99c8b52d05",
+                "value": {
+                    "__fixed__": "81.24"
+                }
+            },
+            {
                 "key": "currency.balances:706ab78924a444e98363380bbf7e881c31738c0220f5ccac75bdb3a075653efe",
                 "value": {
                     "__fixed__": "0.00001"
@@ -19756,7 +20232,7 @@
             {
                 "key": "currency.balances:7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e",
                 "value": {
-                    "__fixed__": "59021402.83988205352288775"
+                    "__fixed__": "59021399.28588205352288775"
                 }
             },
             {
@@ -19766,6 +20242,16 @@
             {
                 "key": "currency.balances:7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e:con_nameservice",
                 "value": 1212121208
+            },
+            {
+                "key": "currency.balances:7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e:con_zyx",
+                "value": 0
+            },
+            {
+                "key": "currency.balances:7fe83202b3130727ca8af23c25d282ccc0b6e49f1c5d57379175991bad1021f7",
+                "value": {
+                    "__fixed__": "104.74"
+                }
             },
             {
                 "key": "currency.balances:7fea2e88a8dc01869eff6de42f14c332980cdf052ecc891f509b09391e2c8028",
@@ -20110,7 +20596,7 @@
             {
                 "key": "currency.balances:8bf21c7dc3a4ff32996bf56a665e1efe3c9261cc95bbf82552c328585c863829",
                 "value": {
-                    "__fixed__": "499998.73"
+                    "__fixed__": "0.19"
                 }
             },
             {
@@ -20176,6 +20662,12 @@
             {
                 "key": "currency.balances:8e521b51a3c3aa7fe829a98d9143024d6b8188af5ebe101cc5c3d81f00a630ce",
                 "value": 1
+            },
+            {
+                "key": "currency.balances:8e77ce39ed1970e0d38119611f84d40827fcffa444592abdd6bc74acdb0f8ec2",
+                "value": {
+                    "__fixed__": "198"
+                }
             },
             {
                 "key": "currency.balances:8e8b3f6bbd959687b6d655b6b430427c7b0233fb9544649c4796b5e9206357cc",
@@ -21490,6 +21982,12 @@
                 }
             },
             {
+                "key": "currency.balances:c1acc19b7e0832d3ad2ed4ea5b8214433743533fcd7f10504d3b6f8a018f5ce6",
+                "value": {
+                    "__fixed__": "1E+2"
+                }
+            },
+            {
                 "key": "currency.balances:c1ae587308612f65005cbbe47565645ff9d83350ce344a9d454641630c9d482a",
                 "value": {
                     "__fixed__": "0.3802"
@@ -22388,7 +22886,7 @@
             {
                 "key": "currency.balances:dff5d54d9c3cdb04d279c3c0a123d6a73a94e0725d7eac955fdf87298dbe45a6",
                 "value": {
-                    "__fixed__": "3931.9116"
+                    "__fixed__": "3957.5092"
                 }
             },
             {
@@ -22458,6 +22956,12 @@
             {
                 "key": "currency.balances:e39ba5821dc9366eeee38c8cdf34b00f834cbb23640e553011a12f7bb850d519",
                 "value": 1
+            },
+            {
+                "key": "currency.balances:e3c79fe52ad368d2d38dae9de9ac7ace7864189c9c2fede7ef112fa7948bdc52",
+                "value": {
+                    "__fixed__": "1.16"
+                }
             },
             {
                 "key": "currency.balances:e3d50e1d6122d1d019f703512b6d5e9e4bb6427caf7e18c0dabea0caf073c0c9",
@@ -23306,6 +23810,26 @@
                 "value": 8
             },
             {
+                "key": "currency.metadata:operator",
+                "value": "team_lock"
+            },
+            {
+                "key": "currency.metadata:token_logo_url",
+                "value": "https://xian.org/assets/img/logo.svg"
+            },
+            {
+                "key": "currency.metadata:token_name",
+                "value": "XIAN"
+            },
+            {
+                "key": "currency.metadata:token_symbol",
+                "value": "XIAN"
+            },
+            {
+                "key": "currency.metadata:token_website",
+                "value": "https://xian.org"
+            },
+            {
                 "key": "currency.streams:team_lock:begins",
                 "value": {
                     "__time__": [
@@ -23683,6 +24207,10 @@
                 "value": "import currency\n__owners = Hash(contract='team_lock', name='owners')\n__required_signatures = Variable(contract='team_lock', name=\n    'required_signatures')\n__owner_count = Variable(contract='team_lock', name='owner_count')\n__transaction_count = Variable(contract='team_lock', name='transaction_count')\n__stream_id = Variable(contract='team_lock', name='stream_id')\n__transactions = Hash(contract='team_lock', name='transactions')\n\n\ndef ____(initial_owners: str, initial_required_signatures: int, stream: str):\n    \"\"\"\n    Initializes the multisig contract.\n    - initial_owners: Comma-separated string of owner addresses.\n    - initial_required_signatures: Number of required signatures to execute a transaction.\n    \"\"\"\n    owner_list = initial_owners.split(',')\n    for owner in owner_list:\n        __owners[owner.strip()] = True\n    __required_signatures.set(initial_required_signatures)\n    __owner_count.set(len(owner_list))\n    __transaction_count.set(0)\n    __stream_id.set(stream)\n\n\n@__export('team_lock')\ndef submit_transaction(to: str=None, amount: float=None, tx_type: str=\n    'transfer'):\n    \"\"\"\n    Submits a new transaction to the multisig wallet.\n    - to: Recipient address.\n    - amount: Amount of tokens to transfer.\n    - tx_type: Type of transaction ('transfer', 'addOwner', 'removeOwner', 'changeRequirement').\n    \"\"\"\n    assert __owners[ctx.caller], 'Only owners can submit transactions.'\n    tx_id = __transaction_count.get() + 1\n    __transaction_count.set(tx_id)\n    __transactions[tx_id, 'type'] = tx_type\n    __transactions[tx_id, 'to'] = to\n    __transactions[tx_id, 'amount'] = amount\n    __transactions[tx_id, 'executed'] = False\n    __transactions[tx_id, 'approvals'] = 0\n    approve_transaction(tx_id)\n    return f'Transaction {tx_id} submitted.'\n\n\n@__export('team_lock')\ndef approve_transaction(tx_id: int):\n    \"\"\"\n    Approves a pending transaction.\n    - tx_id: The ID of the transaction to approve.\n    \"\"\"\n    assert __owners[ctx.caller], 'Only owners can approve transactions.'\n    assert not __transactions[tx_id, 'executed'\n        ], 'Transaction already executed.'\n    assert __transactions[tx_id, 'type'\n        ] is not None, 'Transaction does not exist.'\n    assert not __transactions[tx_id, 'approvers', ctx.caller\n        ], 'Already approved.'\n    __transactions[tx_id, 'approvers', ctx.caller] = True\n    __transactions[tx_id, 'approvals'] += 1\n    return f'Transaction {tx_id} approved by {ctx.caller}.'\n\n\n@__export('team_lock')\ndef execute_transaction(tx_id: int):\n    \"\"\"\n    Executes a transaction if enough approvals are collected.\n    - tx_id: The ID of the transaction to execute.\n    \"\"\"\n    assert __owners[ctx.caller], 'Only owners can execute transactions.'\n    assert not __transactions[tx_id, 'executed'\n        ], 'Transaction already executed.'\n    assert __transactions[tx_id, 'type'\n        ] is not None, 'Transaction does not exist.'\n    approvals = __transactions[tx_id, 'approvals']\n    required = __required_signatures.get()\n    assert approvals >= required, 'Not enough approvals.'\n    tx_type = __transactions[tx_id, 'type']\n    to = __transactions[tx_id, 'to']\n    amount = __transactions[tx_id, 'amount']\n    if tx_type == 'transfer':\n        currency.transfer(amount=amount, to=to)\n    elif tx_type == 'addOwner':\n        assert to is not None, 'No owner specified to add.'\n        assert not __owners[to], 'Address is already an owner.'\n        __owners[to] = True\n        __owner_count.set(__owner_count.get() + 1)\n    elif tx_type == 'removeOwner':\n        assert to is not None, 'No owner specified to remove.'\n        assert __owners[to], 'Address is not an owner.'\n        __owners[to] = False\n        __owner_count.set(__owner_count.get() - 1)\n        if __required_signatures.get() > __owner_count.get():\n            __required_signatures.set(__owner_count.get())\n    elif tx_type == 'changeRequirement':\n        assert amount is not None, 'No new requirement specified.'\n        new_requirement = int(amount)\n        assert new_requirement > 0, 'Requirement must be greater than zero.'\n        total_owners = __owner_count.get()\n        assert new_requirement <= total_owners, 'Requirement cannot be greater than number of owners.'\n        __required_signatures.set(new_requirement)\n    else:\n        return 'Invalid transaction type.'\n    __transactions[tx_id, 'executed'] = True\n    return f'Transaction {tx_id} executed.'\n\n\n@__export('team_lock')\ndef balance_stream():\n    \"\"\"\n    Executes balance_stream function from currency \n    contract which sends tokens to this contract\n    \"\"\"\n    currency.balance_stream(__stream_id.get())\n\n\n@__export('team_lock')\ndef change_currency_metadata(key: str, value: str):\n    \"\"\"\n    Changes the metadata of the currency contract\n    \"\"\"\n    assert __owners[ctx.caller], 'Only owners can change metadata.'\n    currency.change_metadata(key, value)\n"
             },
             {
+                "key": "team_lock.__developer__",
+                "value": "sys"
+            },
+            {
                 "key": "team_lock.__submitted__",
                 "value": {
                     "__time__": [
@@ -23723,10 +24251,6 @@
             {
                 "key": "team_lock.transaction_count",
                 "value": 0
-            },
-            {
-                "key": "team_lock.__developer__",
-                "value": "sys"
             }
         ],
         "nonces": [
@@ -23740,7 +24264,11 @@
             },
             {
                 "key": "0813b6d7d7507c5f735821c32d06cd8f53e6d29807acb7bc92ab0dfe0417386e",
-                "value": 18
+                "value": 26
+            },
+            {
+                "key": "081e233f4e122a5fd79ff3c44f9d58848c3214f7110130936661394403100a9a",
+                "value": 9
             },
             {
                 "key": "0f8e2b5f76a54a91cc628dbd5cc3a0b95ab2bfd5a1305da31d011fa3818af868",
@@ -23768,7 +24296,7 @@
             },
             {
                 "key": "39a982e221a2805a585fad76cc4147daba631ff8e64e640a4ff3815dc780e7f0",
-                "value": 227
+                "value": 229
             },
             {
                 "key": "3bc2445f8daa06789b9c932faa6cd5de56b0da7298d1432db677de1dba54bdc6",
@@ -23815,12 +24343,20 @@
                 "value": 0
             },
             {
+                "key": "7067cf020cfeecd001b656b924639713efa3affc71ecd7db6f4a3e99c8b52d05",
+                "value": 0
+            },
+            {
                 "key": "7c3aa384cd20aa3bc01fc8783d992d01598258713ffd29eeee621f09f53f45e0",
                 "value": 0
             },
             {
                 "key": "7fa496ca2438e487cc45a8a27fd95b2efe373223f7b72868fbab205d686be48e",
-                "value": 98
+                "value": 118
+            },
+            {
+                "key": "7fe83202b3130727ca8af23c25d282ccc0b6e49f1c5d57379175991bad1021f7",
+                "value": 0
             },
             {
                 "key": "8a42ab5235903c76b2ff7f8491aa719685f72c26bf996d7040b1a7ab7a5d47d4",
@@ -23828,7 +24364,7 @@
             },
             {
                 "key": "8bf21c7dc3a4ff32996bf56a665e1efe3c9261cc95bbf82552c328585c863829",
-                "value": 3
+                "value": 5
             },
             {
                 "key": "8ccd49dd13b332fad9d9af8a7a3089c5f1ad17e79d9ce262fcea8dddce16dac4",
@@ -23877,6 +24413,10 @@
             {
                 "key": "dff5d54d9c3cdb04d279c3c0a123d6a73a94e0725d7eac955fdf87298dbe45a6",
                 "value": 21
+            },
+            {
+                "key": "e3c79fe52ad368d2d38dae9de9ac7ace7864189c9c2fede7ef112fa7948bdc52",
+                "value": 2
             },
             {
                 "key": "e734ea6c2b6257de72355e472aa05a4c487e6b463c029ed306df2f01b5636b58",
